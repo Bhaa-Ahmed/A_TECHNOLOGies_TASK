@@ -42,10 +42,15 @@
         <p class="text-darker-color font-bold text-xl">8/12</p>
       </div>
     </div>
-    <div class="flex items-center cursor-pointer relative user">
+    <div
+      class="flex items-center cursor-pointer relative user"
+      (click)="showDropDown = !showDropDown"
+    >
       <span class="material-icons user-icon"> account_circle </span>
-      <span class="material-icons me-2"> expand_more </span>
-      <div class="drop-down">
+      <span class="material-icons me-2">
+        {{ !showDropDown ? "expand_more" : "expand_less" }}
+      </span>
+      <div class="drop-down" *ngIf="showDropDown">
         <ul>
           <li>Setting</li>
           <li>My Team</li>

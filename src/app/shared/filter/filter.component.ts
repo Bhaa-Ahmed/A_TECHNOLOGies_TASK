@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IOption } from 'src/app/models/filterOptions.model';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.css']
+  styleUrls: ['./filter.component.css'],
 })
 export class FilterComponent implements OnInit {
+  @Input() filterName = '';
+  @Input() options: IOption[] = [];
 
-  constructor() { }
+  showOptions = false;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

@@ -23,6 +23,7 @@ module.exports = {
       "blue-color": "#2c98f0",
       "green-color": "#50af56",
       "orange-color": "#fc5b33",
+      "hover-color": "#f5f7fa",
     },
   },
   plugins: [],

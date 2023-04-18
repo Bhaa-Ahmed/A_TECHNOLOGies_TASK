@@ -10,15 +10,11 @@
   margin-right: 6px;
 }
 .drop-down {
-  display: none;
   position: absolute;
   background-color: white;
   top: 45px;
   left: -45px;
   min-width: 120px;
-}
-.user:hover .drop-down {
-  display: block;
 }
 .drop-down li {
   padding: 8px;
@@ -65,7 +61,7 @@ nav .active {
 
 /* Start Details */
 .details {
-  padding-left: 8px;
+  padding-left: 83px;
   background-color: #f5f7fa;
 }
 
