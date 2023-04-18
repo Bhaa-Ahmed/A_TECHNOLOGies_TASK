@@ -24,8 +24,8 @@
   padding: 8px;
 }
 .drop-down li:hover {
-  border-left: 3px solid #0c233e;
-  background-color: rgb(229 231 235);
+  background-color: #f5f7fa;
+  color: #2c98f0;
 }
 
 .border-left-red {
@@ -45,12 +45,12 @@
 }
 
 /* Start Nav */
-ul li {
+nav ul li {
   margin: 20px;
   cursor: pointer;
   color: #8d9aa8;
 }
-ul li:hover {
+nav ul li:hover {
   border-bottom: 3px solid #0c233e;
   color: #0c233e;
 }
@@ -65,7 +65,7 @@ nav .active {
 
 /* Start Details */
 .details {
-  padding-left: 82px;
+  padding-left: 8px;
   background-color: #f5f7fa;
 }
 
