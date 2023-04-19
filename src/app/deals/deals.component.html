@@ -1,3 +1,26 @@
-<app-filter [options]="segmentOptions" filterName="Segment"></app-filter>
-<app-filter filterName="Assignee"></app-filter>
-<app-filter filterName="Status"></app-filter>
+<main class="px-24 py-14">
+  <div class="flex justify-between items-center pb-4">
+    <p class="font-bold text-darker-color text-2xl">Deals</p>
+    <div class="flex items-center">
+      <app-filter [options]="segmentOptions" filterName="Segment"></app-filter>
+      <app-filter filterName="Assignee"></app-filter>
+      <app-filter filterName="Status"></app-filter>
+      <input
+        type="search"
+        placeholder="Search by name or email"
+        class="h-11 w-56 p-4 border-solid border border-gray-400 rounded-md focus:outline-double focus:outline-2 focus:outline-primary-color text-primary-color"
+        (input)="search($event)"
+      />
+      <div class="ms-10">
+        <button
+          class="flex items-center text-white bg-primary-color h-11 rounded-md px-4"
+        >
+          <span class="material-icons inline-block me-4">
+            add_circle_outline
+          </span>
+          ADD DEAL
+        </button>
+      </div>
+    </div>
+  </div>
+</main>

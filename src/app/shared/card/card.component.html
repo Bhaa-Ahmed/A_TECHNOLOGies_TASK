@@ -1,1 +1,35 @@
-<p>card works!</p>
+<div
+  class="rounded-md bg-gray-200 flex flex-col justify-start m-2 p-2 shadow-xl hover:shadow-sm transition duration-500 ease-linear"
+>
+  <div class="flex justify-between">
+    <p class="text-gray-800 font-bold text-xl">{{ deal.company }}</p>
+    <span class="material-icons text-gray-500 cursor-pointer">
+      more_horiz
+    </span>
+  </div>
+  <div class="my-1">
+    <button
+      class="rounded-md bg-grey-color text-white p-1 mx-0.5 text-xs font-bold"
+    >
+      {{ deal.state }}
+    </button>
+    <button class="rounded-md bg-blue-color text-white p-1 mx-0.5 text-xs">
+      {{ deal.probability_status }}
+    </button>
+  </div>
+  <p class="text-gray-500">
+    <span class="material-icons text-lg inline-block align-top"> phone </span>
+    {{ deal.first_name }} {{ deal.last_name }}
+    <span class="inline-block ms-4">{{ deal.phone }}</span>
+  </p>
+  <p class="text-gray-500">
+    <span class="material-icons text-lg inline-block align-top"> email </span>
+    {{ deal.email }}
+  </p>
+  <p class="text-gray-500">
+    <span class="material-icons text-lg inline-block align-top">
+      calendar_today
+    </span>
+    {{ deal.date }}
+  </p>
+</div>

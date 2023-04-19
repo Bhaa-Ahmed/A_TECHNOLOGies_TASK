@@ -1,27 +1,30 @@
-<div class="relative">
+<div class="relative m-1">
   <div
     class="flex justify-between items-center cursor-pointer h-11 w-40 border-solid border text-gray-400 border-gray-400 rounded-md"
     (click)="showOptions = !showOptions"
   >
-    <div>
+    <div class="ps-2">
       <span>{{ filterName }}: </span>
-      <span>ALL</span>
+      <span>All</span>
     </div>
     <span class="material-icons text-black">
       {{ !showOptions ? "expand_more" : "expand_less" }}
     </span>
   </div>
   <div
-    class="w-44 px-5 bg-white border border-solid border-gray-400 rounded-md z-50 absolute"
+    class="w-44 bg-white border border-solid border-gray-400 rounded-md z-50 absolute"
     *ngIf="showOptions"
   >
-    <div *ngFor="let option of options">
-      <ul>
-        <li class="cursor-pointer hover:bg-hover-color my-4">
-          <input type="checkbox" class="me-1" [id]="option.id" />
-          <label [for]="option.id" class="ms-2">{{ option.label }}</label>
-        </li>
-      </ul>
-    </div>
+    <ul>
+      <li
+        *ngFor="let option of options"
+        class="cursor-pointer text-gray-400 hover:bg-hover-color hover:text-darker-color my-4 w-auto"
+      >
+        <input type="checkbox" class="ms-4" [id]="option.id" />
+        <label [for]="option.id" class="ms-2 font-bold">{{
+          option.label
+        }}</label>
+      </li>
+    </ul>
   </div>
 </div>
