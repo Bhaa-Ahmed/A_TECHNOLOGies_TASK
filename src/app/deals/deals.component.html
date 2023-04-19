@@ -23,4 +23,204 @@
       </div>
     </div>
   </div>
+  <div cdkDropListGroup class="flex gap-3">
+    <div class="bg-hover-color">
+      <div>
+        <p class="font-bold text-darker-color">Potential Value</p>
+        <div class="flex">
+          <div class="flex items-center">
+            <img src="assets/tasks.png" alt="" />
+            <span class="inline-block m-2">{{
+              potentialValueArray.length
+            }}</span>
+          </div>
+          <div class="flex items-center">
+            <img src="assets/value.png" alt="" />
+            <span class="inline-block m-2">2.38 mln</span>
+          </div>
+          <div class="flex items-center">
+            <img src=" assets/alarm.png" alt="" />
+            <span class="inline-block m-2">2</span>
+          </div>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        #potentialValueList="cdkDropList"
+        [cdkDropListData]="potentialValueArray"
+        [cdkDropListConnectedTo]="[
+          focusList,
+          contactMadeList,
+          offerSentList,
+          gettingReadyList
+        ]"
+        (cdkDropListDropped)="drop($event)"
+        class="example-list"
+      >
+        <div
+          class="cursor-grab my-2"
+          cdkDrag
+          *ngFor="let deal of potentialValueArray"
+        >
+          <app-card [deal]="deal"></app-card>
+        </div>
+      </div>
+    </div>
+    <div class="bg-hover-color">
+      <div>
+        <p class="font-bold text-darker-color">Focus</p>
+        <div class="flex">
+          <div class="flex items-center">
+            <img src="assets/tasks.png" alt="" />
+            <span class="inline-block m-2">{{ focusArray.length }}</span>
+          </div>
+          <div class="flex items-center">
+            <img src="assets/value.png" alt="" />
+            <span class="inline-block m-2">2.38 mln</span>
+          </div>
+          <div class="flex items-center">
+            <img src=" assets/alarm.png" alt="" />
+            <span class="inline-block m-2">2</span>
+          </div>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        #focusList="cdkDropList"
+        [cdkDropListData]="focusArray"
+        [cdkDropListConnectedTo]="[
+          potentialValueList,
+          contactMadeList,
+          offerSentList,
+          gettingReadyList
+        ]"
+        (cdkDropListDropped)="drop($event)"
+        class="example-list"
+      >
+        <div class="cursor-grab my-2" cdkDrag *ngFor="let deal of focusArray">
+          <app-card [deal]="deal"></app-card>
+        </div>
+      </div>
+    </div>
+    <div class="bg-hover-color">
+      <div>
+        <p class="font-bold text-darker-color">Contact Made</p>
+        <div class="flex">
+          <div class="flex items-center">
+            <img src="assets/tasks.png" alt="" />
+            <span class="inline-block m-2">{{ contactMadeArray.length }}</span>
+          </div>
+          <div class="flex items-center">
+            <img src="assets/value.png" alt="" />
+            <span class="inline-block m-2">2.38 mln</span>
+          </div>
+          <div class="flex items-center">
+            <img src=" assets/alarm.png" alt="" />
+            <span class="inline-block m-2">2</span>
+          </div>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        #contactMadeList="cdkDropList"
+        [cdkDropListData]="contactMadeArray"
+        [cdkDropListConnectedTo]="[
+          potentialValueList,
+          focusList,
+          offerSentList,
+          gettingReadyList
+        ]"
+        (cdkDropListDropped)="drop($event)"
+        class="example-list"
+      >
+        <div
+          class="cursor-grab my-2"
+          cdkDrag
+          *ngFor="let deal of contactMadeArray"
+        >
+          <app-card [deal]="deal"></app-card>
+        </div>
+      </div>
+    </div>
+    <div class="bg-hover-color">
+      <div>
+        <p class="font-bold text-darker-color">Offer Sent</p>
+        <div class="flex">
+          <div class="flex items-center">
+            <img src="assets/tasks.png" alt="" />
+            <span class="inline-block m-2">{{ offerSentArray.length }}</span>
+          </div>
+          <div class="flex items-center">
+            <img src="assets/value.png" alt="" />
+            <span class="inline-block m-2">2.38 mln</span>
+          </div>
+          <div class="flex items-center">
+            <img src=" assets/alarm.png" alt="" />
+            <span class="inline-block m-2">2</span>
+          </div>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        #offerSentList="cdkDropList"
+        [cdkDropListData]="offerSentArray"
+        [cdkDropListConnectedTo]="[
+          potentialValueList,
+          focusList,
+          contactMadeList,
+          gettingReadyList
+        ]"
+        (cdkDropListDropped)="drop($event)"
+        class="example-list"
+      >
+        <div
+          class="cursor-grab my-2"
+          cdkDrag
+          *ngFor="let deal of offerSentArray"
+        >
+          <app-card [deal]="deal"></app-card>
+        </div>
+      </div>
+    </div>
+    <div class="bg-hover-color">
+      <div>
+        <p class="font-bold text-darker-color">Getting Ready</p>
+        <div class="flex">
+          <div class="flex items-center">
+            <img src="assets/tasks.png" alt="" />
+            <span class="inline-block m-2">{{ gettingReadyArray.length }}</span>
+          </div>
+          <div class="flex items-center">
+            <img src="assets/value.png" alt="" />
+            <span class="inline-block m-2">2.38 mln</span>
+          </div>
+          <div class="flex items-center">
+            <img src=" assets/alarm.png" alt="" />
+            <span class="inline-block m-2">2</span>
+          </div>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        #gettingReadyList="cdkDropList"
+        [cdkDropListData]="gettingReadyArray"
+        [cdkDropListConnectedTo]="[
+          potentialValueList,
+          focusList,
+          contactMadeList,
+          offerSentList
+        ]"
+        (cdkDropListDropped)="drop($event)"
+        class="example-list"
+      >
+        <div
+          class="cursor-grab my-2"
+          cdkDrag
+          *ngFor="let deal of gettingReadyArray"
+        >
+          <app-card [deal]="deal"></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>

@@ -7,8 +7,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class DealsService {
-  searchQuery = new Subject<string>();
-  dealsNumber: BehaviorSubject<number> = new BehaviorSubject(0);
+  searchQuery: Subject<string> = new Subject();
 
   constructor(private http: HttpClient) {}
 

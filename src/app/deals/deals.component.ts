@@ -55,12 +55,11 @@ export class DealsComponent implements OnInit {
   getDeals() {
     this.dealsService.getDeals().subscribe((res) => {
       this.deals = res.deals;
-      this.filterDealsBasedOnStatus(this.deals);
+      this.filterDealsBasedOnStatus(res.deals);
     });
   }
 
   filterDealsBasedOnStatus(deals: IDeal[]) {
-    this.dealsService.dealsNumber.next(deals.length);
     this.potentialValueArray = [];
     this.focusArray = [];
     this.contactMadeArray = [];
@@ -91,5 +90,22 @@ export class DealsComponent implements OnInit {
   search(event: Event) {
     let searchQuery = (event.target as HTMLInputElement).value;
     this.dealsService.searchQuery.next(searchQuery);
+  }
+
+  drop(event: CdkDragDrop<IDeal[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    }
   }
 }
