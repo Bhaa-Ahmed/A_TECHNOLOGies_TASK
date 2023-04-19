@@ -1,27 +1,31 @@
-# Task
+# A TECHNOLOGIES TASK
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+## Overview
 
-## Development server
+A CRM pipeline management application using Angular. The application fetch contacts data and enable users to manage these Deals in multiple pipeline stages.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Display the deals data in a visual pipeline, divided into the following stages:
+  - **Potential Value.**
+  - **Focus.**
+  - **Contact Made.**
+  - **Offer Sent.**
+  - **Getting Ready.**
+- Users able to drag and drop deals between the different stages of the
+  pipeline.
+- Update the deal status when it is moved to a different stage in
+  the pipeline.
+- A search functionality to search for contacts based on
+  first name, last name, or email.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup
 
-## Build
+- Angular 14.0.0
+- CSS using tailwindcss
+- Icons using Material Icons
+- Drag and Drop using Angular-CDK
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Type in Terminal **_npm install_** and then **_ng serve_** for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
